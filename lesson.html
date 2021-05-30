@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>はじめてのデバッグ</title>
+    <link rel="stylesheet" type="text/css" href="./lesson.css">
+  </head>
+  <body>
+    <h1>Hello world!!</h1>
+    <script type="text/javascript" src="./main.js"></script>
+  </body> 
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>はじめてのデバック</title>
+  <link rel="stylesheet" type="text/css" href="./lesson.css">
+</head>
+<body>
+  <h1>Hello world!!</h1>
+  <script type="text/javascript" src="./main.js"></script>
+</body>
+</html> -->
+
+
+<!-- まとめ
+    JavaScriptを利用したプログラミングでは色々なファイルからJavaScriptを実行する場面も多く、 デバッグ作業にあたってはこれらのツールの利用が不可欠です。実戦動画を何度も確認するなどし、 これらのデバッグ作業をいち早く使いこなせることでよりJavaScriptを利用した効率的な開発ができる ようになるでしょう。
+    ポイント1. デベロッパーツールを利用してConsoleかSourcesでデバック行う -->
+    <!-- ポイント2. Consoleを利用してデバッグする場合はConsoleオブジェクトを利用して変数値を確認する 
+    ポイント3. ブレークポイントを指定することでプログラムの途中の変数値をチェックできる -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>イベント操作</title>
+  
+</head>
+<body>
+  <button>サンプルボタン</button> <div></div>
+</body>
+</html>
+
+
+<!-- まとめ -->
+    <!-- イベントについて理解できたでしょうか。DOM操作は基本的にこのイベントとワンセットで実施され ます。 要素の追加に伴い、イベントを追加しなければならない場面も多いので、イベントリスナの使い方に ついてもよく抑えておきましょう。
+    ポイント1. 何かしらのアクションとDOM操作を紐付けている部分をイベントという 
+    ポイント2. イベントの待ち受けにはaddEventListener()を利用する
+
+        要素.addEventListener("イベント文字列", function() { 
+          // DOM操作など
+        }); -->
+    <!-- ポイント3. addEventListener()内の関数ではthisは、イベントリスナーを登録した要素自体を指す -->
+    
+<!-- ここまで学習したのはユーザーが実行可能なイベントに関するものでした。開発者としてはブラウザ やプログラムによるもの、例えば次のようなイベントにも目を見張る必要があります。
+    イベント1. ブラウザのサイズが変わったので画面のレイアウトを変更したい
+    イベント2. 要素が全て読み込まれたのでJavaScriptの処理を実施したい
+    イベント3. ユーザーの想定外の入力値によりエラーが発生したらメッセージを出力したい
+
+    イベント操作の基本に慣れたら復習がてらこれらのイベントをどうすれば実装できるのか調べてみる と良いでしょう。 -->
