@@ -1,0 +1,176 @@
+HTML
+<!-- 基本 -->
+
+<body>
+ <header>
+ <h1>HTMLの研修</h1>
+ <nav>
+ <ul>
+ <li><a href="#">はじめに</a></li>
+ <li><a href="#">HTMLとは</a></li>
+ <li><a href="#">演習問題</a></li>
+ </ul>
+ </nav>
+ </header>
+ <main>
+ <article>
+ <header><h1>はじめに</h1></header>
+ <section>
+ <header>
+ <h2>本日の時間割</h2>
+ <p>1日のスケジュール</p>
+ </header>
+ ・・・・・・・・・・・・
+ </section>
+ </article>
+ </main>
+</body>
+
+リストタグ
+<ul>
+ <li>りんご</li>
+ <li>みかん</li>
+ <li>バナナ</li>
+</ul>
+<ol>
+ <li>きゅうり</li>
+ <li>なす</li>
+ <li>にんじん</li>
+</ol>
+とすると
+↓
+りんご
+みかん
+バナナ
+1. きゅうり
+2. なす
+3. にんじん
+
+4-2-7 テーブルを表すタグ
+//表を作るときに使用。
+
+都道府県 よみかた
+北海道 ほっかいどう
+青森 あおもり
+秋田 あきた
+//=================コード====================
+<table>
+ <thead>
+ <tr>
+ <th>都道府県</th>
+ <th>よみかた</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>北海道</td>
+ <td>ほっかいどう</td>
+ </tr>
+ <tr>
+ <td>青森</td>
+ <td>あおもり</td>
+ </tr>
+ <tr>
+ <td>秋田</td>
+ <td>あきた</td>
+ </tr>
+ </tbody>
+</table>
+//=================コード====================
+//tr要素
+table rowのことで表の行をあらわす。
+
+//th td要素
+table header cellとtable data cellです。 th は見出し用のセル(表の1コマ)で td は表の値のセルを
+表します。
+※theadとtbodyは省略することが可能と言いましたが、thで囲んだものをヘッダーとしてデザインを
+当てたりを行います。
+1つのセルを横に連結させたい場合は　 colspan=2 、縦に繋げたい場合は rowspan=2 としま
+す。
+//=================コード====================
+<table>
+ <tr>
+ <th colspan=2>都道府県</th>
+ </tr>
+ <tr>
+ <td>秋田</td>
+ <td>あきた</td>
+ </tr>
+</table>
+//=================コード====================
+都道府県
+秋田 あきた
+
+
+4-2-8 フォームを扱うタグ
+ユーザーが入力・選択したデータをHTMLから送信するために使用します。
+実際に入力されるところは input タグを用いてテキストやチェックさせる入力フォームを作りま
+す。
+
+formタグの属性
+よく使うformタグの属性
+
+属性名 用途 値
+action 送信先のURL
+URL 
+例 action="https://www.fox hound.co.jp/home"
+method 送信する際のHTTPメソッドを指定(送り
+方)
+method="GET"
+method="POST"
+name フォームの名前 適当なテキスト　例: name="test"
+
+methodの GET 、 POSTはプログラムと連携した際にメリット、デメリット
+フォームで送信する場合はPOSTの方を使うことが一般的です
+
+fromタグで基本となるフォームの働きを定義し、その中でinputタグなどを利用して入力する場所を
+用意するイメージです。
+
+//input要素
+type属性で指定したキーワードによって色々な種類のフォーム入力を提供できます。
+一番基本となる1行のテキスト入力フォーム
+<label>
+　テキスト入力のサンプル:
+</label>
+<input type="text" name="form-text-1"
+inputは終了タグがいりません。
+
+//以下がtype属性で指定可能なもの一覧です。
+・text 1行のテキスト入力
+・password パスワードの入力フォーム(入力が「*」となる)
+・radio ラジオボタン
+・checkbox チェックボックス
+・submit 送信ボタン
+・reset リセットボタン
+・image 画像送信ボタン
+・button 汎用のボタン
+・file 送信するファイル選択
+・hidden 表示させずに送信するテキスト
+・search 検索用
+・tel 電話番号用
+・url URL用
+・email メールアドレス
+
+属性名 用途 値
+type なんのフォームか 上記の一覧から選択
+value フォームの値、初期値として用意したいなら定義 value="aaaaa"などtypeによって
+name フォーム部品の名前 適当なテキスト　例: name="test"
+checked チェックボックスやラジオボタンを選択状態にする checked と属性名だけで定義
+required 入力が必須条件のとき こちらも属性名だけで定義
+
+//そのほかのフォーム部品
+nputタグを使わないフォーム部品がいくつかあります。 これらはinputタグと違い開始タグと終了タ
+グを使用します。
+
+//textarea 複数行のテキスト入力
+<textarea name="description"></textarea>
+
+//button inputのタイプ buttonやsubmit、resetとほぼ同様。typeで同じくこの3つを指定可能
+<button type="submit">ボタンタグのボタン</button>
+
+//select 選択肢の中から選ぶことができるoptionで選択肢の値を指定
+<select name="todofuken">
+ <option value="1">北海道</option>
+ <option value="2">青森</option>
+ <option value="3">秋田</option>
+</select>
